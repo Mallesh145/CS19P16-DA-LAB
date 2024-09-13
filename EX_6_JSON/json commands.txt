@@ -1,0 +1,22 @@
+json commands
+jq '.[] | {name: .name, salary: .salary}' C:\Users\malle\Downloads\DataAnalytics\JSON\employees.json
+Aggregation: Calculate the total salary.
+
+bash
+
+jq '[.[] | .salary] | add' C:\Users\malle\Downloads\DataAnalytics\JSON\employees.json
+Count: Count the number of employees.
+
+bash
+
+jq '. | length' C:\Users\malle\Downloads\DataAnalytics\JSON\employees.json
+Filter: Get employees from the Engineering department.
+
+bash
+
+jq '.[] | select(.department == "Engineering")' Sort: Sort employees by age.C:\Users\malle\Downloads\DataAnalytics\JSON\employees.json
+bash
+
+jq 'sort_by(.age)' C:\Users\malle\Downloads\DataAnalytics\JSON\employees.json
+
+gpt:https://chatgpt.com/share/16dc3d51-a0c1-4c70-8979-d49caab7d500
